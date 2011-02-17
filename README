@@ -1,0 +1,13 @@
+Ruby on Rails - Up and Running
+  (by Bruce A. Tate & Curt Hibbs)
+  (Publisher: O'REILLY)
+  
+This book assumes an older version of Rails, but since I like to use Rails 3,
+I am committing a step-by-step walk-through of the book, with any modifications
+that are needed for the examples to work in Rails 3.
+
+I hope it makes learning Rails 3 easier for anyone who has this book, but has
+struggled to make the examples work in Rails 3.
+
+Alain Achkar (SimplyTech)
+
