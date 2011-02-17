@@ -26,6 +26,7 @@ rule Steps
   sh  10 : rails generate controller Greeting ;
   sh  13 : rails generate controller Greeting index ;
   sh  21 : rails new photos ;
+  sh  23 : rails generate model Photo ;
 }
 
 #=============================================================================#
