@@ -28,8 +28,8 @@ rule Steps
   sh  21 : rails new photos ;
   sh  23 : rails generate model Photo ;
   sh  24 : rake db:migrate ;
-  sh  24a : echo .databases | sqlite3 development.sqlite3 ;
-  sh  24b : echo .tables    | sqlite3 development.sqlite3 ;
+  sh  24a : echo .databases \| sqlite3 development.sqlite3 ;
+  sh  24b : echo .tables    \| sqlite3 development.sqlite3 ;
 }
 
 #=============================================================================#
