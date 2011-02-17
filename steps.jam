@@ -24,6 +24,7 @@ rule Steps
 {
   sh   4 : rails new chapter-1 ;
   sh  10 : rails generate controller Greeting ;
+  sh  13 : rails generate controller Greeting index ;
 }
 
 #=============================================================================#
