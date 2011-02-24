@@ -30,6 +30,7 @@ rule Steps
   sh  24 : rake db:migrate ;
   sh  24a : cd $PROJECT_ROOT/photos/db \; echo .databases \| sqlite3 development.sqlite3 ;
   sh  24b : cd $PROJECT_ROOT/photos/db \; echo .tables \| sqlite3 development.sqlite3 ;
+  rails  26  : photo=Photo.new \; photo.filename='cat.jpg' \; photo.save ;
 }
 
 #=============================================================================#
