@@ -4,6 +4,8 @@ photo=Photo.new
 photo.filename='cat.jpg'
 photo.save
 
-Photo.find(:all)
+Photo.find(:all) do |x|
+  puts x.id.to_s + " " + x.filename
+end
 
 

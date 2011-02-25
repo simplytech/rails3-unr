@@ -22,15 +22,23 @@
 
 rule Steps          
 {
-  sh   4 : rails new chapter-1 ;
-  sh  10 : rails generate controller Greeting ;
-  sh  13 : rails generate controller Greeting index ;
-  sh  21 : rails new photos ;
-  sh  23 : rails generate model Photo ;
-  sh  24 : rake db:migrate ;
-  sh  24a : cd $PROJECT_ROOT/photos/db \; echo .databases \| sqlite3 development.sqlite3 ;
-  sh  24b : cd $PROJECT_ROOT/photos/db \; echo .tables \| sqlite3 development.sqlite3 ;
-  rails  26  : photo=Photo.new \; photo.filename='cat.jpg' \; photo.save ;
+  Sh      4  : rails new chapter-1 ;
+  Sh     10  : rails generate controller Greeting ;
+  Sh     13  : rails generate controller Greeting index ;
+  Sh     21  : rails new photos ;
+  Sh     23  : rails generate model Photo ;
+  Sh     24  : rake db:migrate ;
+  Sh     24a : "cd $PROJECT_ROOT/photos/db ; echo .databases | sqlite3 development.sqlite3" ;
+  Sh     24b : "cd $PROJECT_ROOT/photos/db ; echo .tables    | sqlite3 development.sqlite3" ;
+
+  Rails  26  : "photo=Photo.new ; photo.filename='cat.jpg' ; photo.save" ;
+
+  Rails  26b : "
+               Photo.new do |dog|
+                 dog.filename='dog.jpg'
+                 dog.save
+               end
+               " ;
 }
 
 #=============================================================================#
