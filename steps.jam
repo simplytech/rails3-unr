@@ -39,6 +39,13 @@ rule Steps
                  dog.save
                end
                " ;
+
+  Rails  34  : "
+               cat=Photo.find_by_filename 'cat.jpg'
+               cat.filename='Cat.jpg'
+               cat.save
+               puts cat.filename
+               " ;
 }
 
 #=============================================================================#
