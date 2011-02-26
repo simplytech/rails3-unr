@@ -46,6 +46,18 @@ rule Steps
                cat.save
                puts cat.filename
                " ;
+
+  RFile  34b : app/models/photo.rb    : 
+
+"class Photo < ActiveRecord::Base
+  validates_presence_of :filename
+end" ;
+
+  Rails 34c  : "
+               photo = Photo.new
+               puts photo.save
+               puts photo.errors
+               " ;
 }
 
 #=============================================================================#
